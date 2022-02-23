@@ -397,10 +397,13 @@ switch get(h,'Tag')
     case 'cosine'
          plot(handles.plot_output,cosd(0:1:360));
     case 'equation'
-        x=0:0.1:10;
-        y=0:0.1:10;
-     
+        x=-10:0.1:10;
+        y=-10:0.1:10;
+         
         plot(handles.plot_output,eval(get(handles.equation_input,'String')));
+       % xlim(handles.plot_output,[-20,20])
+       % ylim(handles.plot_output,[-20,20])
+        
     otherwise
         plot(handles.plot_output,0,0);
 end
